@@ -52,16 +52,17 @@ public class MainActivity extends AppCompatActivity implements ListFlag.ItemSele
 
     @Override
     public void onItemSelected(int index){
-        tvDescription.setText(descriptions[index]);
-        //potrait mode
-        if (findViewById(R.id.layout_portait)!=null)
-        {
-            FragmentManager manager=this.getSupportFragmentManager();
+        if(tvDescription!=null) {
+            tvDescription.setText(descriptions[index]);
+            //potrait mode
+            if (findViewById(R.id.layout_portait) != null) {
+                FragmentManager manager = this.getSupportFragmentManager();
 
-            manager.beginTransaction()
-                    .show(manager.findFragmentById(R.id.flag))
-                    .hide(manager.findFragmentById(R.id.listflag))
-                    .commit();
+                manager.beginTransaction()
+                        .show(manager.findFragmentById(R.id.flag))
+                        .hide(manager.findFragmentById(R.id.listflag))
+                        .commit();
+            }
         }
     }
 }

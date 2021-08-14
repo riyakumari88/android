@@ -17,7 +17,7 @@ import android.widget.ArrayAdapter;
 /**
 
  */
-public abstract class ListFlag extends ListFragment {
+public class ListFlag extends ListFragment {
 
     ItemSelected activity;
 
